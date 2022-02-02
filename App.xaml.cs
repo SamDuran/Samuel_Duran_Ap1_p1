@@ -13,5 +13,9 @@ namespace Samuel_Duran_Ap1_p1_
     /// </summary>
     public partial class App : Application
     {
+        private void App_DispatcherUnhandledException(object sander, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e){
+            MessageBox.Show($"Ocurrio un error... {e.Exception.Message}", "Unhandled Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            e.Handled=true;
+        }
     }
 }
