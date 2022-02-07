@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="PROGRAMA X" Height="400" Width="600">
     <Grid>
-        <StackPanel Orientation="Vertical"> <!-- BackGround = "COLOR"-->
+        <StackPanel Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="ID" />
                 <!--<TextBox Text={Binding id} Width="100">
