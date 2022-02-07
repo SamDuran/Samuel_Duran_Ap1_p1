@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Samuel_Duran_Ap1_p1_.Entidades;
 
 public class Contexto : DbContext
 {
