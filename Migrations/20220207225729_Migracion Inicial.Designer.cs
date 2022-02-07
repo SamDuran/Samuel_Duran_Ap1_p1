@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Samuel_Duran_Ap1_p1_.DAL;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
