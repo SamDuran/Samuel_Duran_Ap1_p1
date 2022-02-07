@@ -12,8 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-//using Samuel_Duran_Ap1_p1_.UI.Consulta;
-//using Samuel_Duran_Ap1_p1_.UI.Registro;
+//using Samuel_Duran_Ap1_p1_.UI.Consultas;
+//using Samuel_Duran_Ap1_p1_.UI.Registros;
 
 namespace Samuel_Duran_Ap1_p1_
 {
@@ -28,7 +28,7 @@ namespace Samuel_Duran_Ap1_p1_
             InitializeComponent();
         }
         private void rMenuItem_Click(object sander, RoutedEventArgs e){
-            //var registro = new Registro();
+            //Registro registro = new Registro();
             //registro.Show();
         }
         private void cMenuItem_Click(object sander, RoutedEventArgs e){

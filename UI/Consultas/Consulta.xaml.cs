@@ -13,8 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Samuel_Duran_Ap1_p1_.UI{
-    public partial class Consulta : Window{
+namespace Samuel_Duran_Ap1_p1_.UI.Consultas
+{
+    public partial class Consulta : Window
+    {
         public Consulta()
         {
             InitializeComponent();

@@ -13,7 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Samuel_Duran_Ap1_p1_.UI{
+namespace Samuel_Duran_Ap1_p1_.UI.Registros
+{
     public partial class Registro : Window{
         public Registro()
         {

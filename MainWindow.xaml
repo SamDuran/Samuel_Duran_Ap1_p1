@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Samuel_Duran_Ap1_p1_"
         mc:Ignorable="d"
+        Icon="./Resources/Icon.png"
         Title="PROGRAMA X" Height="380" Width="520">
     <Grid>
+        <Image Source ="./Resources/Main_BG.png" Height="380" Width="520" Grid.RowSpan="8" Grid.Row="1"/>
         <StackPanel> <!-- BackGround = "COLOR"-->
             <Menu Height="25" Width="160" HorizontalAlignment="Center">
                 <MenuItem x:Name="RegistrosMenuItem" Header="Registros" FontSize="18" Height="23" Width="80">
@@ -16,7 +18,7 @@
                     <MenuItem x:Name="cMenuItem" Header="Consulta X" Click="cMenuItem_Click"/>
                 </MenuItem>
             </Menu>
-            <Label HorizontalAlignment="Center" FontSize="28" Content= "Registro y consulta de ENTIDAD"/>
+            <Label HorizontalAlignment="Center" FontSize="28" Content= "Registro y consulta de ENTIDAD" Foreground="#FFFFFF"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -15,5 +15,14 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
+  
+  <ItemGroup>
+    <Resource Include="./Resources/Icon.png"/>
+    <Resource Include="./Resources/Main_BG.png"/>
+    <Resource Include="./UI/Consultas/Resources/Icon.png"/>
+    <Resource Include="./UI/Consultas/Resources/Main_BG.png"/>
+    <Resource Include="./UI/Registros/Resources/Icon.png"/>
+    <Resource Include="./UI/Registros/Resources/Main_BG.png"/>
+  </ItemGroup>
 
 </Project>
