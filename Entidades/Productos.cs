@@ -8,7 +8,7 @@ namespace Samuel_Duran_Ap1_p1_.Entidades
         [Key]
         public int ProductoId { get; set; }
         public string? Descripcion { get; set; }
-        public bool Existencia { get; set; }
+        public decimal Existencia { get; set; }
         public decimal Costo { get; set; }
         public decimal ValorInventario { get; set; }
     }

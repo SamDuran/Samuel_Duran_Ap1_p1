@@ -6,15 +6,12 @@
         xmlns:local="clr-namespace:Samuel_Duran_Ap1_p1_"
         mc:Ignorable="d"
         Icon="./Resources/Icon.png"
-        Title="PROGRAMA X" Height="400" Width="600">
+        Title="Registro de productos" Height="400" Width="600">
     <Grid>
         <Image Source="./Resources/Main_BG.png" Height="400" Width="600" Grid.RowSpan="8" Grid.Row="1"/>
         <StackPanel Orientation="Vertical"> 
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="ID" />
-                <!--<TextBox Text={Binding id} Width="100">
-
-                </TextBox>-->
                 <Button x:Name="buscarBtn" Margin="10" Click="buscarBtn_Click">
                     <StackPanel Orientation="Horizontal">
                         <Label Content="🔎Buscar"/>

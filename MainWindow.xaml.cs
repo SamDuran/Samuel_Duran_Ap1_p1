@@ -12,13 +12,13 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-//using Samuel_Duran_Ap1_p1_.UI.Consultas;
-//using Samuel_Duran_Ap1_p1_.UI.Registros;
+using Samuel_Duran_Ap1_p1_.UI.Consultas;
+using Samuel_Duran_Ap1_p1_.UI.Registros;
 
 namespace Samuel_Duran_Ap1_p1_
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Programa de gestion de productos de colmado
     /// </summary>
     //Primer parcial aplicada 1. Samuel Duran 2019-0793 
     public partial class MainWindow : Window
@@ -28,12 +28,12 @@ namespace Samuel_Duran_Ap1_p1_
             InitializeComponent();
         }
         private void rMenuItem_Click(object sander, RoutedEventArgs e){
-            //Registro registro = new Registro();
-            //registro.Show();
+            Registro registro = new Registro();
+            registro.Show();
         }
         private void cMenuItem_Click(object sander, RoutedEventArgs e){
-            //Consulta consulta = new Consulta();
-            //consulta.Show();
+            Consulta consulta = new Consulta();
+            consulta.Show();
         }
     }
 }
