@@ -6,19 +6,33 @@
         xmlns:local="clr-namespace:Samuel_Duran_Ap1_p1_"
         mc:Ignorable="d"
         Icon="./Resources/Icon.png"
-        Title="Registro de productos" Height="400" Width="600">
+        Title="Registro de productos" Height="375" Width="400">
     <Grid>
-        <Image Source="./Resources/Main_BG.png" Height="400" Width="600" Grid.RowSpan="8" Grid.Row="1"/>
-        <StackPanel Orientation="Vertical"> 
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="ID" />
-                <Button x:Name="buscarBtn" Margin="10" Click="buscarBtn_Click">
+        <StackPanel Orientation="Vertical" Margin="10"> 
+            <Label Content="Registro de productos" Margin="10,4" FontSize="24"/>
+            <TextBlock Margin="20,10,20,3" Text="ProductoId"/>
+            <StackPanel Orientation="Horizontal" Margin="20,0,20,0">
+                <TextBox Width="60" Height="21" x:Name="productoIDTextBox" Text="{Binding ProductoId}"/>
+                <Button Width="60" Height="23" x:Name="buscarBtn" Margin="10" Click="buscarBtn_Click">
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="🔎Buscar"/>
+                        <Label Content="🔎Buscar" FontSize="11"/>
                     </StackPanel>
                 </Button>
             </StackPanel>
+            <TextBlock Margin="20,0,20,0" Text="Descripcion"/>
+            <TextBox x:Name="descripcionTextBox" Margin="20,0,20,0" Text="{Binding Descripcion}" Width="290" Height="21" HorizontalAlignment="Left"/>
+
+            <TextBlock Margin="20,0,20,0" Text="Existencia"/>
+            <TextBox x:Name="existenciaTextBox" Margin="20,0,20,0" Text="{Binding Existencia}" Width="140" Height="21" HorizontalAlignment="Left"/>
+
+            <TextBlock Margin="20,0,20,0" Text="Costo"/>
+            <TextBox x:Name="costoTextBox" Margin="20,0,20,0" Text="{Binding Costo}" Width="140" Height="21" HorizontalAlignment="Left"/>
             <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="20,0,20,0" Text="Valor inventario"/>
+                <TextBlock FontSize="20" Margin="20,0,20,0" Text="{Binding ValorInventario}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
                 <Button x:Name="nuevoBtn" Margin="10" Click="nuevoBtn_Click">
                     <StackPanel Orientation="Horizontal">
                         <Label Content="🆕 Nuevo"/>

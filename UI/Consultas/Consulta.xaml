@@ -6,11 +6,31 @@
         xmlns:local="clr-namespace:Samuel_Duran_Ap1_p1_"
         mc:Ignorable="d"
         Icon="./Resources/Icon.png"
-        Title="PROGRAMA X" Height="400" Width="600">
+        Title="Consulta de Productos" Height="400" Width="600">
     <Grid>
-        <Image Source = "./Resources/Main_BG.png" Height="400" Width="600" Grid.RowSpan="8" Grid.Row="1"/>
-        <StackPanel> <!-- BackGround = "COLOR"-->
-           
+        <StackPanel Orientation ="Vertical" Margin="10,5">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Label Content="Productos"/>
+                <ComboBox x:Name="selComboBox" Width="120" Height="23">
+                    <ComboBoxItem x:Name="ListaComboBoxItem" Content="Productos"/>
+                </ComboBox>
+            </StackPanel>
+            <Button xName="BuscarBTN" Height="30" Width="80" Margin="0,20" Click="BuscarBTN_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Buscar"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <StackPanel>
+            <DataGrid x:Name="productosDataGrid" Height="250" Width="380" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID Producto" Binding="{Binding ProductId}"/>
+                    <DataGridTextColumn Header="Descripcion" Binding="{Binding Descripcion}"/>
+                    <DataGridTextColumn Header="Existencia" Binding="{Binding Existencia}"/>
+                    <DataGridTextColumn Header="Costo" Binding="{Binding Costo}"/>
+                    <DataGridTextColumn Header="Valor inventario" Binding="{Binding ValorInventario}"/>
+                </DataGrid.Columns>
+            </DataGrid>
         </StackPanel>
     </Grid>
 </Window>

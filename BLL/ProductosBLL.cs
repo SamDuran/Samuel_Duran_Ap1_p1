@@ -29,6 +29,24 @@ namespace Samuel_Duran_Ap1_p1_.BLL
 
             return está;
         }
+        public static bool Existe(string descrip)
+        {
+            bool está = false;
+            Contexto contexto = new Contexto();
+
+            try
+            {
+                está=contexto.Productos.Any(e=> e.Descripcion==descrip);
+            }catch (Exception)
+            {
+                throw;
+            }finally
+            {
+                contexto.Dispose();
+            }
+
+            return está;
+        }
         public static bool Insertar(Productos producto)
         {
             Contexto contexto = new Contexto();
@@ -88,6 +106,45 @@ namespace Samuel_Duran_Ap1_p1_.BLL
                 contexto.Dispose();
             }
             return producto;
+        }
+        public static bool Eliminar(int id)
+        {
+            Contexto contexto = new Contexto();
+            bool paso = false;
+
+            try
+            {
+                var producto = contexto.Productos.Find(id);
+                if(producto !=null)
+                {
+                    contexto.Productos.Remove(producto);
+                    paso=contexto.SaveChanges()>0;
+                }
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+            finally{
+                contexto.Dispose();
+            }
+            return paso;
+        }
+        public static List<Productos> GetList(Expression<Func<Productos, bool>>criterio)
+        {
+            List<Productos> lista = new List<Productos>();
+            Contexto contexto = new Contexto();
+            try
+            {
+                lista = contexto.Productos.Where(criterio).ToList();
+            }catch(Exception)
+            {
+                throw;
+            }
+            finally{
+                contexto.Dispose();
+            }
+            return lista;
         }
     }
 }
