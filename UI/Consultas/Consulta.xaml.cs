@@ -19,6 +19,7 @@ namespace Samuel_Duran_Ap1_p1_.UI.Consultas
 {
     public partial class Consulta : Window
     {
+
         public Consulta()
         {
             InitializeComponent();
@@ -26,12 +27,16 @@ namespace Samuel_Duran_Ap1_p1_.UI.Consultas
         private void BuscarBTN_Click(object sander, RoutedEventArgs e)
         {
             var lista = new List<Productos>();
-            switch(selComboBoxItem.SelectedIndex)
+            switch(selComboBox.SelectedIndex)
             {
                 case 0:
-                lista = getList();
+                lista = ProductosBLL.GetList();
                 break;
             }
+
+            productosDataGrid.ItemsSource = null;
+            productosDataGrid.ItemsSource = lista;
+
         }
     } 
 }
