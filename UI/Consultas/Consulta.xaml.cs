@@ -33,10 +33,8 @@ namespace Samuel_Duran_Ap1_p1_.UI.Consultas
                 lista = ProductosBLL.GetList();
                 break;
             }
-
             productosDataGrid.ItemsSource = null;
             productosDataGrid.ItemsSource = lista;
-
         }
     } 
 }

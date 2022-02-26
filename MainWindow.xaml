@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Samuel_Duran_Ap1_p1_"
         mc:Ignorable="d"
         Icon="./Resources/Icon.png"
-        Title="Programa de gestion de productos" Height="380" Width="520">
+        Title="Programa de gestion de productos" Height="200" Width="520">
     <Grid>
         <Image Source ="./Resources/Main_BG.png" Height="380" Width="520" Grid.RowSpan="8" Grid.Row="1"/>
         <StackPanel>

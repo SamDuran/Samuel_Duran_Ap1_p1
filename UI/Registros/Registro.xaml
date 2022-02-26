@@ -13,9 +13,9 @@
             <TextBlock Margin="20,10,20,3" Text="ProductoId"/>
             <StackPanel Orientation="Horizontal" Margin="20,0,20,0">
                 <TextBox Width="60" Height="21" x:Name="productoIDTextBox" Text="{Binding ProductoId}"/>
-                <Button Width="60" Height="23" x:Name="buscarBtn" Margin="10" Click="buscarBtn_Click">
+                <Button Width="60" Height="28" x:Name="buscarBtn" Margin="10" Click="buscarBtn_Click">
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="🔎Buscar" FontSize="11"/>
+                        <Label Content="🔎Buscar" FontSize="10"/>
                     </StackPanel>
                 </Button>
             </StackPanel>
