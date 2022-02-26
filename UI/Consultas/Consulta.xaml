@@ -5,27 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Samuel_Duran_Ap1_p1_"
         mc:Ignorable="d"
-        Icon="./Resources/Icon.png"
+        Icon="./Resources/Icon.png" 
         Title="Consulta de Productos" Height="400" Width="600">
     <Grid>
-        <StackPanel Orientation ="Vertical" Margin="10,5">
+        <StackPanel Orientation ="Vertical" VerticalAlignment="Top" Margin="10,5">
             <StackPanel Orientation="Horizontal" Margin="5">
-                <Label Content="Productos"/>
-                <ComboBox x:Name="selComboBox" Width="120" Height="23">
-                    <ComboBoxItem x:Name="ListaComboBoxItem" Content="Productos"/>
-                </ComboBox>
-            </StackPanel>
-            <Button x:Name="BuscarBTN" Height="30" Width="80" Margin="0,20" Click="BuscarBTN_Click">
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="Buscar"/>
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Productos"/>
+                    <ComboBox x:Name="selComboBox" Width="120" Height="23">
+                        <ComboBoxItem Content="ProductoId"/>
+                        <ComboBoxItem Content="Descripcion"/>
+                    </ComboBox>
                 </StackPanel>
-            </Button>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Criterio"/>
+                    <TextBox  Height="22" Width="100" x:Name="criterioTextBox" Margin="10" />
+                </StackPanel>
+                <Button x:Name="BuscarBTN" Height="30" Width="80" Margin="0,20" Click="BuscarBTN_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Buscar"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
         </StackPanel>
-        <StackPanel>
-            <DataGrid x:Name="productosDataGrid" Height="250" Width="380" AutoGenerateColumns="False">
+        <StackPanel Margin="10" VerticalAlignment="Bottom">
+            <DataGrid x:Name="productosDataGrid" Height="260" Width="400" AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID Producto" Binding="{Binding ProductId}"/>
+                    <DataGridTextColumn Header="ID Producto" Binding="{Binding ProductoId}"/>
                     <DataGridTextColumn Header="Descripcion" Binding="{Binding Descripcion}"/>
+                    <DataGridTextColumn Header="Costo" Binding="{Binding Costo}"/>
+                    <DataGridTextColumn Header="Existencia" Binding="{Binding Existencia}"/>
+                    <DataGridTextColumn Header="Valor Inventario" Binding="{Binding ValorInventario}"/>
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>

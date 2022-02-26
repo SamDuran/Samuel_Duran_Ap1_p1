@@ -133,13 +133,13 @@ namespace Samuel_Duran_Ap1_p1_.BLL
             }
             return paso;
         }
-        public static List<Productos> GetList()
+        public static List<Productos> GetList(Expression<Func<Productos, bool>> criterio)
         {
             List<Productos> lista = new List<Productos>();
             Contexto contexto = new Contexto();
             try
             {
-                lista = contexto.Productos.ToList();
+                lista = contexto.Productos.Where(criterio).ToList();
             }catch(Exception)
             {
                 throw;
