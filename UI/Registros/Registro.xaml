@@ -27,10 +27,8 @@
 
             <TextBlock Margin="20,0,20,0" Text="Costo"/>
             <TextBox x:Name="costoTextBox" Margin="20,0,20,0" Text="{Binding Costo}" Width="140" Height="21" HorizontalAlignment="Left"/>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Margin="20,0,20,0" Text="Valor inventario"/>
-                <TextBlock FontSize="20" Margin="20,0,20,0" Text="{Binding ValorInventario}"/>
-            </StackPanel>
+            <TextBlock Margin="20,0,20,0" Text="Valor inventario"/>
+            <TextBox x:Name="ValorInventarioTextBox" Width="140" Height="21" Margin="20,0,20,0" Text="{Binding ValorInventario}" HorizontalAlignment="Left" IsReadOnly="true"/>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
                 <Button x:Name="nuevoBtn" Margin="10" Click="nuevoBtn_Click">

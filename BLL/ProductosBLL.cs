@@ -54,6 +54,7 @@ namespace Samuel_Duran_Ap1_p1_.BLL
 
             try
             {
+                producto.ValorInventario = producto.Costo * producto.Existencia;
                 contexto.Productos.Add(producto);
                 esta = contexto.SaveChanges()>0;
             }catch(Exception)
@@ -73,6 +74,7 @@ namespace Samuel_Duran_Ap1_p1_.BLL
 
             try
             {
+                producto.ValorInventario = producto.Costo * producto.Existencia;
                 contexto.Entry(producto).State = EntityState.Modified;
                 esta = contexto.SaveChanges()>0;
             }catch(Exception)
@@ -117,6 +119,7 @@ namespace Samuel_Duran_Ap1_p1_.BLL
                 var producto = contexto.Productos.Find(id);
                 if(producto !=null)
                 {
+                    /* producto.ValorInventario = producto.Costo * producto.Existencia; */
                     contexto.Productos.Remove(producto);
                     paso=contexto.SaveChanges()>0;
                 }

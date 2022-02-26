@@ -63,6 +63,7 @@ namespace Samuel_Duran_Ap1_p1_.UI.Registros
 
             if(paso)
             {
+                ValorInventarioTextBox.Text=(producto.Costo* producto.Existencia).ToString();
                 MessageBox.Show("¡Se guardó el producto exitosamente!", "Aviso");
                 Limpiar();
             }else
