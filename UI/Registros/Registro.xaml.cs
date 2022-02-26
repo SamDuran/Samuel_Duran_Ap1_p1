@@ -43,7 +43,10 @@ namespace Samuel_Duran_Ap1_p1_.UI.Registros
         private void buscarBtn_Click(object sander, RoutedEventArgs e){
             var productos = ProductosBLL.Buscar(Convert.ToInt32(productoIDTextBox.Text));
             if(productos!=null)
+            {
                 this.producto=productos;
+                Cargar(); //Solo faltaba cargar :c
+            }
             else
             {
                 this.producto = new Productos();
