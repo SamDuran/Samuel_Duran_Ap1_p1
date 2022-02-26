@@ -31,7 +31,8 @@ namespace Samuel_Duran_Ap1_p1_.UI.Registros
 
         private bool Validar(){
             bool esValido = false;
-            if(productoIDTextBox.Text.Length != 0)
+            Productos aBuscar = ProductosBLL.Buscar(Convert.ToInt32(productoIDTextBox.Text));
+            if((productoIDTextBox.Text.Length != 0 && !ProductosBLL.Existe(descripcionTextBox.Text)) ||(aBuscar.Descripcion.Equals(producto.Descripcion) && aBuscar.ProductoId.Equals(producto.ProductoId)))
             {
                 esValido = true;
             }
@@ -55,10 +56,8 @@ namespace Samuel_Duran_Ap1_p1_.UI.Registros
         }
         private void guardarBtn_Click(object sander, RoutedEventArgs e){
             if(!Validar())
-                return;
-            if(ProductosBLL.Existe(descripcionTextBox.Text))
             {
-                MessageBox.Show("Ya existe este producto. No se pudo agregar.", "Error");
+                MessageBox.Show("No se puede guardar. Verifique los datos.", "Error");
                 return;
             }
 
